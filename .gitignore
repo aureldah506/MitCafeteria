@@ -1,0 +1,15 @@
+# Build folders
+bin/
+obj/
+
+# IDE settings
+.idea/
+.vs/
+*.user
+*.userosscache
+*.sln.doccache
+
+# NuGet packages
+packages/
+*.nuget.props
+*.nuget.targets
