@@ -1,4 +1,6 @@
-﻿namespace src;
+﻿using Xunit;
+
+namespace src;
 
 public class PlanningGeneratorTests
 {

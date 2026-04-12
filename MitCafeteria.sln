@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MitCafeteria", "MitCafeteria\MitCafeteria.csproj", "{7F9A17C9-D793-49E2-B930-98757E1B0FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{3D1CBAFE-8892-487A-BEA2-D5BC954BD6AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{C9F3ADE2-F223-4CF8-AEE8-46041135945C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F9A17C9-D793-49E2-B930-98757E1B0FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9A17C9-D793-49E2-B930-98757E1B0FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9A17C9-D793-49E2-B930-98757E1B0FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9A17C9-D793-49E2-B930-98757E1B0FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1CBAFE-8892-487A-BEA2-D5BC954BD6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1CBAFE-8892-487A-BEA2-D5BC954BD6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1CBAFE-8892-487A-BEA2-D5BC954BD6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1CBAFE-8892-487A-BEA2-D5BC954BD6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F3ADE2-F223-4CF8-AEE8-46041135945C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F3ADE2-F223-4CF8-AEE8-46041135945C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F3ADE2-F223-4CF8-AEE8-46041135945C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F3ADE2-F223-4CF8-AEE8-46041135945C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

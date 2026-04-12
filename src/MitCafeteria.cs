@@ -18,16 +18,24 @@ public static class MitCafeteriaGenerator
     public static List<ShiftPlan> Generate(string[] staff, string[] sections, int[] shifts)
     {
         var schedule = new List<ShiftPlan>();
+
         foreach (var id in shifts)
         {
             var plan = new ShiftPlan { ShiftId = id };
-                
-            for (int i = 0; i < 3; i++)
+
+            // Logique de rotation : on crée un décalage basé sur l'ID du shift
+            // On "fait tourner" la liste des employés pour que les binômes changent
+            var rotatedStaff = staff.Skip(id % staff.Length)
+                .Concat(staff.Take(id % staff.Length))
+                .ToArray();
+
+            for (int i = 0; i < sections.Length; i++)
             {
-                plan.Assignments.Add(new Assignment {
+                plan.Assignments.Add(new Assignment
+                {
                     Section = sections[i],
-                    Employee1 = staff[i*2],
-                    Employee2 = staff[i*2+1]
+                    Employee1 = rotatedStaff[i * 2],
+                    Employee2 = rotatedStaff[i * 2 + 1]
                 });
             }
             schedule.Add(plan);
