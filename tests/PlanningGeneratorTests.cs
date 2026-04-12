@@ -56,4 +56,19 @@ public class PlanningGeneratorTests
         // Assert
         Assert.Throws<ArgumentException>(act);
     }
+    
+    [Fact]
+    public void should_return_empty_schedule_when_inputs_are_empty()
+    {
+        // Arrange
+        string[] staff = Array.Empty<string>();
+        string[] sections = Array.Empty<string>();
+        int[] shifts = Array.Empty<int>();
+
+        // Act
+        var result = MitCafeteriaGenerator.Generate(staff, sections, shifts);
+
+        // Assert
+        Assert.Empty(result);
+    }
 }
