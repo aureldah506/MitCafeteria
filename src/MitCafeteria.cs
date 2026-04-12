@@ -17,29 +17,30 @@ public static class MitCafeteriaGenerator
 {
     public static List<ShiftPlan> Generate(string[] staff, string[] sections, int[] shifts)
     {
-        var schedule = new List<ShiftPlan>();
+        // On transforme chaque ID de shift en un ShiftPlan
+        return shifts.Select(id => CreateShiftPlan(id, staff, sections)).ToList();
+    }
 
-        foreach (var id in shifts)
+    private static ShiftPlan CreateShiftPlan(int shiftId, string[] staff, string[] sections)
+    {
+        var plan = new ShiftPlan { ShiftId = shiftId };
+        var rotatedStaff = GetRotatedStaff(staff, shiftId);
+
+        for (int i = 0; i < sections.Length; i++)
         {
-            var plan = new ShiftPlan { ShiftId = id };
-
-            // Logique de rotation : on crée un décalage basé sur l'ID du shift
-            // On "fait tourner" la liste des employés pour que les binômes changent
-            var rotatedStaff = staff.Skip(id % staff.Length)
-                .Concat(staff.Take(id % staff.Length))
-                .ToArray();
-
-            for (int i = 0; i < sections.Length; i++)
+            plan.Assignments.Add(new Assignment
             {
-                plan.Assignments.Add(new Assignment
-                {
-                    Section = sections[i],
-                    Employee1 = rotatedStaff[i * 2],
-                    Employee2 = rotatedStaff[i * 2 + 1]
-                });
-            }
-            schedule.Add(plan);
+                Section = sections[i],
+                Employee1 = rotatedStaff[i * 2],
+                Employee2 = rotatedStaff[i * 2 + 1]
+            });
         }
-        return schedule;
+        return plan;
+    }
+
+    private static string[] GetRotatedStaff(string[] staff, int shiftId)
+    {
+        int offset = shiftId % staff.Length;
+        return staff.Skip(offset).Concat(staff.Take(offset)).ToArray();
     }
 }
