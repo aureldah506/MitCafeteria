@@ -1,0 +1,15 @@
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\bin\Debug\net10.0\MitCafeteria.exe
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\bin\Debug\net10.0\MitCafeteria.deps.json
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\bin\Debug\net10.0\MitCafeteria.runtimeconfig.json
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\bin\Debug\net10.0\MitCafeteria.dll
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\bin\Debug\net10.0\MitCafeteria.pdb
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.AssemblyInfoInputs.cache
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.AssemblyInfo.cs
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.csproj.CoreCompileInputs.cache
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.sourcelink.json
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.dll
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\refint\MitCafeteria.dll
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.pdb
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\MitCafeteria.genruntimeconfig.cache
+C:\Users\dahau\RiderProjects\MitCafeteria\MitCafeteria\obj\Debug\net10.0\ref\MitCafeteria.dll

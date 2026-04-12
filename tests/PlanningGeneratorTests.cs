@@ -86,4 +86,24 @@ public class PlanningGeneratorTests
         // Assert
         Assert.Throws<ArgumentException>(act);
     }
+    
+    [Fact]
+    public void should_format_shift_correctly_following_subject_example()
+    {
+        // Arrange
+        string[] staff = { "Marcus", "Lateefa", "Donald", "Rashad", "Quincy", "Mia" };
+        string[] sections = { "Lobby", "Dining Room", "Kitchen" };
+        int[] shifts = { 0 };
+        var schedule = MitCafeteriaGenerator.Generate(staff, sections, shifts);
+
+        // Act
+        string output = MitCafeteriaGenerator.FormatShift(schedule[0]);
+
+        // Assert
+        // On vérifie que le format contient les éléments clés demandés
+        Assert.Contains("Shift 0", output);
+        Assert.Contains("Lobby [ Marcus & Lateefa ]", output);
+        Assert.Contains("Dining Room [ Donald & Rashad ]", output);
+        Assert.Contains("Kitchen [ Quincy & Mia ]", output);
+    }
 }

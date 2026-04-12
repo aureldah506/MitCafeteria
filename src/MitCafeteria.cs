@@ -30,6 +30,11 @@ public static class MitCafeteriaGenerator
         // On transforme chaque ID de shift en un ShiftPlan
         return shifts.Select(id => CreateShiftPlan(id, staff, sections)).ToList();
     }
+    
+    public static string FormatShift(ShiftPlan plan)
+    {
+        return "hello";
+    }
 
     private static ShiftPlan CreateShiftPlan(int shiftId, string[] staff, string[] sections)
     {
