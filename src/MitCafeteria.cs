@@ -33,7 +33,11 @@ public static class MitCafeteriaGenerator
     
     public static string FormatShift(ShiftPlan plan)
     {
-        return "hello";
+        var assignmentsStrings = plan.Assignments.Select(a => 
+            $"{a.Section} [ {a.Employee1} & {a.Employee2} ]");
+    
+        // On assemble le tout avec l'ID du shift au début
+        return $"Shift {plan.ShiftId}: {string.Join(" ", assignmentsStrings)}";
     }
 
     private static ShiftPlan CreateShiftPlan(int shiftId, string[] staff, string[] sections)
