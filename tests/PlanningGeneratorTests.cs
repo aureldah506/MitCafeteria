@@ -71,4 +71,19 @@ public class PlanningGeneratorTests
         // Assert
         Assert.Empty(result);
     }
+    
+    [Fact]
+    public void should_throw_exception_when_sections_count_does_not_match_pairs_count()
+    {
+        // Arrange
+        string[] staff = { "Marcus", "Lateefa", "Donald", "Rashad" }; // 2 binômes (4/2)
+        string[] sections = { "Lobby" }; 
+        int[] shifts = { 0 };
+
+        // Act
+        Action act = () => MitCafeteriaGenerator.Generate(staff, sections, shifts);
+
+        // Assert
+        Assert.Throws<ArgumentException>(act);
+    }
 }
