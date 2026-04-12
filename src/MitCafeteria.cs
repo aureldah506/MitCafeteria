@@ -22,6 +22,11 @@ public static class MitCafeteriaGenerator
         {
             throw new ArgumentException("Le nombre d'employés doit être pair.");
         }
+        //1 binome par section
+        if (sections.Length != staff.Length / 2 && staff.Length > 0)
+        {
+            throw new ArgumentException("Le nombre de sections doit correspondre au nombre de binômes.");
+        }
         // On transforme chaque ID de shift en un ShiftPlan
         return shifts.Select(id => CreateShiftPlan(id, staff, sections)).ToList();
     }
