@@ -17,6 +17,11 @@ public static class MitCafeteriaGenerator
 {
     public static List<ShiftPlan> Generate(string[] staff, string[] sections, int[] shifts)
     {
+        // Ajout de la règle métier pour le cas incohérent 
+        if (staff.Length % 2 != 0)
+        {
+            throw new ArgumentException("Le nombre d'employés doit être pair.");
+        }
         // On transforme chaque ID de shift en un ShiftPlan
         return shifts.Select(id => CreateShiftPlan(id, staff, sections)).ToList();
     }
