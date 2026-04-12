@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using System.Linq;
+using System;
 
 namespace src;
 
@@ -39,5 +40,20 @@ public class PlanningGeneratorTests
 
         // Assert
         Assert.NotEqual(partnerShift0, currentPartnerShift1); 
+    }
+    
+    [Fact]
+    public void should_throw_exception_when_number_of_employees_is_odd()
+    {
+        // Arrange
+        string[] staff = { "Marcus", "Lateefa", "Donald" }; // 3 employés = Impair 
+        string[] sections = { "Lobby" };
+        int[] shifts = { 0 };
+
+        // Act
+        Action act = () => MitCafeteriaGenerator.Generate(staff, sections, shifts);
+
+        // Assert
+        Assert.Throws<ArgumentException>(act);
     }
 }
